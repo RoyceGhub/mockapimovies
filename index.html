@@ -144,7 +144,7 @@
 
             <div class="mb-3">
               <label for="updateMoviePosterURL" class="form-label">Poster Url</label>
-              <input type="url" class="form-control" name="updateMoviePosterURL" id="updateMoviePosterURL" required />
+              <input type="url" class="form-control" name="updateMoviePosterURL" id="poster_url" required />
             </div>
 
             <div class="mb-3">
@@ -200,7 +200,7 @@
   <!-- JavaScript code -->
   <script>
     // API URL for CRUD operations
-    const url = "https://647eff7bc246f166da8fdb07.mockapi.ioLinks";
+    const url = "https://647eff7bc246f166da8fdb07.mockapi.io";
 
 
     // Function to get genres from API or localStorage
@@ -430,7 +430,7 @@
         document.getElementById("updateMovieTitle").value = selectedMovie.title;
         document.getElementById("updateMovieDescription").value = selectedMovie.description;
         document.getElementById("updateMovieReleaseDate").value = selectedMovie.release_date;
-        document.getElementById("updateMoviePosterURL").value = selectedMovie.poster_url;
+        document.getElementById("poster_url").value = selectedMovie.poster_url;
         document.getElementById("updateMovieMovieURL").value = selectedMovie.movie_url;
 
         const updateMovieModal = bootstrap.Modal.getOrCreateInstance("#updateMovieModal");
@@ -448,7 +448,7 @@
       const title = document.getElementById("updateMovieTitle").value;
       const description = document.getElementById("updateMovieDescription").value;
       const release_date = document.getElementById("updateMovieReleaseDate").value;
-      const poster_url = document.getElementById("updateMoviePosterURL").value;
+      const poster_url = document.getElementById("poster_url").value;
       const movie_url = document.getElementById("updateMoviemovieURL").value;
 
       // Send a POST request to create a new movie
@@ -480,7 +480,7 @@
           document.getElementById("updateMovieTitle").value = "";
           document.getElementById("updateMovieDescription").value = "";
           document.getElementById("updateMovieReleaseDate").value = "";
-          document.getElementById("updateMoviePosterURL").value = "";
+          document.getElementById("poster_url").value = "";
           document.getElementById("updateMovieMovieURL").value = "";
         })
         .catch((error) => {
